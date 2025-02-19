@@ -18,10 +18,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidSecurityStarterTheme {
                 Scaffold(
-                    modifier = Modifier
-                        .fillMaxSize()) { innerPadding ->
+                    modifier =
+                        Modifier
+                            .fillMaxSize(),
+                ) { innerPadding ->
                     HomeTitle(
-                        modifier = Modifier.padding(innerPadding)
+                        modifier = Modifier.padding(innerPadding),
                     )
                 }
             }
