@@ -10,6 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.tahadeta.androidsecuritystarter.ui.components.HomeTitle
 import com.tahadeta.androidsecuritystarter.ui.theme.AndroidSecurityStarterTheme
+import com.tahadeta.androidsecuritystarter.ui.util.RootDetectionUtil
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,9 +23,14 @@ class MainActivity : ComponentActivity() {
                         Modifier
                             .fillMaxSize(),
                 ) { innerPadding ->
-                    HomeTitle(
-                        modifier = Modifier.padding(innerPadding),
-                    )
+                    // check if the phone is rooted
+                    if (RootDetectionUtil.checkRootedPhone()) {
+                        HomeTitle(
+                            modifier = Modifier.padding(innerPadding),
+                        )
+                    } else {
+                        this.finish()
+                    }
                 }
             }
         }
