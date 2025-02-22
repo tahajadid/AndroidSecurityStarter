@@ -10,7 +10,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.tahadeta.androidsecuritystarter.ui.components.HomeTitle
 import com.tahadeta.androidsecuritystarter.ui.theme.AndroidSecurityStarterTheme
-import com.tahadeta.androidsecuritystarter.ui.util.RootDetectionUtil
+import com.tahadeta.androidsecuritystarter.util.RootDetectionUtil
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

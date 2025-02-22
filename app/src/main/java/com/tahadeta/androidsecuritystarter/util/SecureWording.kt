@@ -1,4 +1,4 @@
-package com.tahadeta.androidsecuritystarter.ui.util
+package com.tahadeta.androidsecuritystarter.util
 
 class SecureWording {
     fun getSecretWord(): String = "Secret Word :)"

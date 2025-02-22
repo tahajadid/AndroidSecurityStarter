@@ -1,4 +1,4 @@
-package com.tahadeta.androidsecuritystarter.ui.util
+package com.tahadeta.androidsecuritystarter.util
 
 import android.os.Build
 import java.io.File

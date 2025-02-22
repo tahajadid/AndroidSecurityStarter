@@ -14,7 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.tahadeta.androidsecuritystarter.ui.theme.AndroidSecurityStarterTheme
-import com.tahadeta.androidsecuritystarter.ui.util.SecureWording
+import com.tahadeta.androidsecuritystarter.util.SecureWording
 
 @Composable
 fun HomeTitle(modifier: Modifier = Modifier) {

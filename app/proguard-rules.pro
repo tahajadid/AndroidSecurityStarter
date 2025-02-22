@@ -24,11 +24,11 @@
 -keep class * implements java.io.Serializable { *; }
 
 # Keep the SecureWording class but obfuscate its methods
--keep class com.tahadeta.androidsecuritystarter.ui.util.SecureWording {
+-keep class com.tahadeta.androidsecuritystarter.util.SecureWording {
     public <init>();
 }
 
 # Remove or inline sensitive method
--assumenosideeffects class com.tahadeta.androidsecuritystarter.ui.util.SecureWording {
+-assumenosideeffects class com.tahadeta.androidsecuritystarter.util.SecureWording {
     public java.lang.String getSecretWord();
 }

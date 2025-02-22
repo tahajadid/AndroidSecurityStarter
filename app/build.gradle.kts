@@ -13,10 +13,19 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
+        ndkVersion = "25.1.8937393" // Use latest version of NDK
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
+        }
+        externalNativeBuild {
+            cmake {
+                cppFlags += ""
+            }
+        }
+        ndk {
+            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a")) // Define supported architectures
         }
     }
 
@@ -53,6 +62,12 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
         }
     }
 }
