@@ -1,0 +1,23 @@
+name: Build and Deploy
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java (for Android)
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Inject secrets into environment
+        run: echo "MY_API_KEY=${{ secrets.MY_API_KEY }}" >> $GITHUB_ENV
+
+      - name: Build the project
+        run: ./gradlew assembleRelease
