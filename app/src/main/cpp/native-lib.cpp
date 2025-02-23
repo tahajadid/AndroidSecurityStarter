@@ -7,7 +7,7 @@
 
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_tahadeta_androidsecuritystarter_util_NativeLibWrapper_getApiKey(JNIEnv *env,jobject thiz) {
+Java_com_tahadeta_androidsecuritystarter_util_NativeLibWrapper_getApiKey(JNIEnv *env,jobject th) {
     std::string apiKey = "MY_API_KEY";
     return env->NewStringUTF(apiKey.c_str());
 }

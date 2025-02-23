@@ -44,6 +44,9 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
+
+            // Get the API_KEY from the build
+            buildConfigField("String", "MY_API_KEY","\"${System.getenv("MY_API_KEY")}\"")
         }
     }
     compileOptions {
